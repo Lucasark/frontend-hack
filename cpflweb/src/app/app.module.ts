@@ -12,13 +12,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormOperadorComponent,
     OperadorDetailsComponent,
-    OperadorListComponent
+    OperadorListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

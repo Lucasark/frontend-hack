@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../environments/environment';
+import { Operador } from './operador';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class OperadorService {
 
   constructor(private http: HttpClient) { }
 
-  getOperador(id: number): Observable<Object> {
-    return this.http.get(`${this.API}/${id}`);
+  getOperador(id: number): Observable<Operador> {
+    return this.http.get<Operador>(`${this.API}/${id}`);
   }
 
   createOperador(employee: Object): Observable<Object> {
