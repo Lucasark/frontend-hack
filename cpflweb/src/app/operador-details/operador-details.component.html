@@ -1,0 +1,22 @@
+<div *ngIf="operador">
+        <div>
+            <label>Name: </label> {{operador.id}}
+        </div>
+        <div>
+            <label>Age: </label> {{operador.nome}}
+        </div>
+        <div>
+            <label>Active: </label> {{operador.login}}
+        </div>
+        <div>
+            <label>Active: </label> {{operador.active}}
+        </div>
+    
+        <span class="button is-small btn-primary" *ngIf='operador.active' (click)='updateActive(false)'>Inactive</span>
+    
+        <span class="button is-small btn-primary" *ngIf='!operador.active' (click)='updateActive(true)'>Active</span>
+    
+        <span class="button is-small btn-danger" (click)='deleteOperador()'>Delete</span>
+    
+        <hr/>
+    </div>
